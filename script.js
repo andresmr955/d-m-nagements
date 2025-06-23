@@ -10,10 +10,16 @@ const backgrounds = [
 
 let currentIndex = 0;
 
+function changeBackground() {
+  currentIndex = (currentIndex + 1) % backgrounds.length;
+  hero.style.backgroundImage = `url('/d-m-nagements/assets/${backgrounds[currentIndex]}')`;
+}
+
 btn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % backgrounds.length; 
-    hero.style.backgroundImage = `url('/d-m-nagements/assets/${backgrounds[currentIndex]}')`;
+    changeBackground();
 });
+
+setInterval(changeBackground, 5000);
 
 const form = document.getElementById('form-contact');
 const responseMessage = document.getElementById('reponse');
