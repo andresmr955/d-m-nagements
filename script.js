@@ -12,7 +12,7 @@ let currentIndex = 0;
 
 function changeBackground() {
   currentIndex = (currentIndex + 1) % backgrounds.length;
-  hero.style.backgroundImage = `url('/assets/${backgrounds[currentIndex]}')`;
+  hero.style.backgroundImage = `url('./assets/${backgrounds[currentIndex]}')`;
 }
 
 btn.addEventListener('click', () => {
