@@ -12,7 +12,7 @@ let currentIndex = 0;
 
 btn.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % backgrounds.length; 
-    hero.style.backgroundImage = `url('/d-m-nagements/assets/${backgrounds[currentIndex]}')`;
+    hero.style.backgroundImage = `url('/assets/${backgrounds[currentIndex]}')`;
 });
 
 const form = document.getElementById('form-contact');
