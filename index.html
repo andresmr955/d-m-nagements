@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Déménagements rapides</h1>
+    <nav>
+      <a href="#servicios">Services</a>
+      <a href="#contacto">Contact</a>
+    </nav>
+  </header>
+  <main class="main-container">
+    <section class="hero">
+        <h2>Votre déménagement en toute sécurité et sans stress</h2>
+        <p>Nous nous occupons de tout pour vous ! Maisons, bureaux et plus encore.</p>
+        <button id="change-bg-btn">>></button>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="service">
+            <video 
+                src="./videos/main_video.mp4" 
+                muted 
+                autoplay 
+                loop 
+                playsinline 
+                preload="metadata" 
+                aria-label="Video demostrativo de Mudanzas Locales">
+            </video>
+            <h3>Déménagements locaux</h3>
+            <p>Transferts rapides à l'intérieur de la ville, avec un personnel qualifié.</p>
+        </div>
+        <div class="service">
+            <video 
+                src="./videos/main_video.mp4" 
+                muted 
+                autoplay 
+                loop 
+                playsinline 
+                preload="metadata" 
+                aria-label="Video demostrativo de Mudanzas Locales">
+            </video>
+        <h3>Déménagements nationaux</h3>
+        <p>Voyagez en toute sécurité dans tout le pays.</p>
+        </div>
+        <div class="service">
+            <video 
+                src="./videos/main_video.mp4" 
+                muted 
+                autoplay 
+                loop 
+                playsinline 
+                preload="metadata" 
+                aria-label="Video demostrativo de Mudanzas Locales">
+            </video>
+        <h3>Emballage et protection</h3>
+        <p>Un emballage professionnel et des matériaux de qualité pour vos objets de valeur.</p>
+        </div>
+
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contactez-nous</h2>
+
+        
+        <form id="form-contact" action="https://formspree.io/f/xldbolze" method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Tu nombre"  required />
+
+            <label>Email:</label>
+            <input type="email"  name="email" placeholder="Tu correo electrónico" required />
+            
+            <label>Message:</label>
+            <textarea rows="4" name="message" placeholder="Tu mensaje"></textarea>
+
+            <button type="submit">Enviar</button>
+            <p id="reponse"></p>
+        </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Déménagements rapides | Tous droits réservés
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
