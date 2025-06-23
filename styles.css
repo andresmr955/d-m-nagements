@@ -73,7 +73,7 @@ nav a {
 }
 
 .hero {
-  background-image: url('/d-m-nagements/assets/imag1.jpg'); /* Imagen inicial */
+  background-image: url('/assets/imag1.jpg'); /* Imagen inicial */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
