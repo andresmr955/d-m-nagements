@@ -7,7 +7,11 @@ const backgrounds = [
   'imag2.jpg',
   'imag3.jpg',
 ];
-
+const backgroundImages = [
+  "url('./assets/imag1.jpg')",
+  "url('./assets/imag2.jpg')",
+  "url('./assets/imag3.jpg')"
+];
 let currentIndex = 0;
 
 function changeBackground() {
@@ -59,3 +63,32 @@ form.addEventListener('submit', async (e) => {
 setTimeout(() => {
   responseMessage.classList.remove('show');
 }, 5000); 
+
+
+
+  const swiper = new Swiper('.swiper', {
+  loop: false,
+  speed: 5000,
+  autoplay: {
+    delay: 1000,  // tiempo en milisegundos (3 segundos)
+    disableOnInteraction: false, // para que no se detenga si el usuario interactúa
+  },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  on: {
+   
+    slideChange: function () {
+      const currentIndex = swiper.realIndex;
+      const hero = document.querySelector('.swiper-slide-active .hero');
+      if (hero) {
+        hero.style.backgroundImage = backgroundImages[currentIndex];
+      }
+    }
+  }
+});
+
+// Inicializa Swiper manualmente para que se dispare 'init'
+swiper.init();
